@@ -1,5 +1,5 @@
 mat-toolbar{
-    position: absolute;
+    position: sticky;
     top:0;
     z-index: 100;
     background:#f7f7f7;
@@ -29,6 +29,6 @@ button{
 }
 ::ng-deep{
     .mat-menu-content{
-        width: 160px;
+        width: 165px;
     }
 }
