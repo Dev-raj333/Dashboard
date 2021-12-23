@@ -1,0 +1,51 @@
+<p>This is table</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Sn</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Sales</th>
+        </tr>
+    </thead>
+    <tbody>
+        <div *ngIf="this.table.length===0;else elseBlock">No list to display</div>
+        <ng-template #elseBlock>
+            <tr *ngFor="let List of table |paginate:{itemsPerPage:3, currentPage:p}; let i=index">
+                <td>{{List.sn}}</td>
+                <td>{{List.name}}</td>
+                <td>{{List.address}}</td>
+                <td>{{List.sales}}</td>
+            </tr>
+        </ng-template>    
+        <pagination-controls class="paginate" (pageChange)="p=$event"></pagination-controls>
+    </tbody>
+</table>
+
+<!-- <table mat-table  [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="sn">
+        <th mat-header-cell *matHeaderCellDef> Sn </th>
+        <td mat-cell *matCellDef="let element"> {{element.sn}} </td>
+      </ng-container>
+     -->
+      <!-- Name Column -->
+      <!-- <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container> -->
+    
+      <!-- Weight Column -->
+      <!-- <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+      </ng-container> -->
+    
+      <!-- Symbol Column -->
+      <!-- <ng-container matColumnDef="symbol">
+        <th mat-header-cell *matHeaderCellDef> Sales </th>
+        <td mat-cell *matCellDef="let element"> {{element.sales}} </td>
+      </ng-container> -->
+    
+      <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table> -->

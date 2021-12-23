@@ -11,6 +11,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
@@ -18,6 +21,9 @@ import { SettingComponent } from './setting/setting.component';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutComponent } from './about/about.component';
+import { MatcardComponent } from './dashboard/matcard/matcard.component';
+import { GraphComponent } from './dashboard/graph/graph.component';
+import { TableComponent } from './dashboard/table/table.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,10 @@ import { AboutComponent } from './about/about.component';
     SettingComponent,
     HeaderComponent,
     DashboardComponent,
-    AboutComponent
+    AboutComponent,
+    MatcardComponent,
+    GraphComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +48,10 @@ import { AboutComponent } from './about/about.component';
     MatMenuModule,
     MatIconModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatCardModule,
+    MatTableModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,19 @@
 <div class="container-fluid page">
     <div class="page__box p-3 mt-2">Dashboard</div>
     <div class="page__content shadow p-3 position-relative">
-        <div class="page__content-data position-absolute">
-            Home content goes here
+        <div class="page__content-data position-relative">
+            <div>
+                <app-matcard></app-matcard>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="row">
+                <div class="card-container col-ml col-md col-xl" id="graph">
+                    <app-graph></app-graph>
+                </div>
+                <div class="col-ml col-md col-xl">
+                    <app-table></app-table>
+                </div>
+            </div>
         </div>
     </div>
 </div>
